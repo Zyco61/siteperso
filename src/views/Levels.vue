@@ -386,7 +386,7 @@ export default {
 
 <style lang="sass">
 .navbarcolor
-  background: #40444b  !important
+  background: #40444b !important
   color:#d8d9da
 .dropbtn
   background-color: #40444b

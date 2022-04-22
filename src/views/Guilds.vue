@@ -1,6 +1,29 @@
 <template lang="pug">
 div
-  v-card zad
+  v-layout
+    v-app-bar.navbarcolor(absolute style='overflow: visible')
+      v-avatar
+        v-img(src="../assets/lastvoxeslogo.png" max-height="40" max-width="40")
+      v-app-bar-title
+        a Last Voxes | Guilds
+      .dropdown.right
+        v-btn.dropbtn(@click="dropdown()" elevation="5") {{ getitem("username") }}
+          v-avatar
+            v-img(:src="getimage()")
+        #myDropdown.dropdown-content
+          div
+            a(@click="gotoprofile()") Profile
+            a(@click="logout()") Log Out
+  div#displayicons
+    div(v-for="item in guilds")
+      div(v-if="item.icon")
+        v-avatar(size="100")
+          v-img#img-guild(:src="'https://cdn.discordapp.com/icons/'+item.id+'/'+item.icon+'.webp'", alt = "icon server", @click="goToGuild(item.id, item.name, item.icon)")
+        p {{item.name}}
+      div(v-else)
+        v-avatar(size="100")
+          v-img#img-guild(:src="'https://i.ibb.co/C5bm002/test.png'", alt = "icon server", @click="goToGuild(item.id, item.name)")
+        p {{item.name}}
 </template>
 
 <script>
