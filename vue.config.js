@@ -1,3 +1,11 @@
+const fs = require('fs')
+
 module.exports = {
-  lintOnSave: false
+  transpileDependencies: [
+    'vuetify'
+  ],
+
+  pluginOptions: {
+    vuetify: {}
+  }
 }
