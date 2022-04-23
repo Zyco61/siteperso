@@ -1,5 +1,5 @@
 <template lang="pug">
-h1 404 NOT FOUND
+h1.center 404 NOT FOUND
 v-btn(@click="returnindex()") Return to the main page
 </template>
 <script>

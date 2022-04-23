@@ -16,18 +16,56 @@ div
 			v-card#ecartcategorie(elevation="0")
 			div(style="width: 90vw;")
 				v-card(width="80%")
-					p Je m'appelle Romain, alias Zyco.
-					p Passionné par le développement informatique depuis mes 12 ans, je me suis intéressé énormément aux différents langages et technologies.
-					p Ayant conforté ma voie professionnelle durant un stage de 3e dans une SSII/ESN à Cholet, je m'y suis mis d'autant plus en profondeur.
-					p Je suis donc désormais à la recherche d'une entreprise pour effectuer une alternance, et ai créé ce site pour pouvoir y éditer mes informations plus facilement, et fournir des informations complémentaires.
-					p Vous pouvez en savoir plus via les icones sur le tiroir de gauche, ou me contacter avec la page contact.
+					v-card-title
+						a A3Multimedia | 49300 Cholet | Maine-et-Loire
+					v-card-text
+						div
+							b
+								u 17 Décembre 2018 - 21 Décembre 2018
+						p Stage d'observation de 3e, qui m'a permis de confirmer ma voie professionnelle
+						p Suivi d'un développeur et étude d'un site web créer par l'entreprise (recherche de bugs, failles etc)
+						p Etude de WinDev, logiciel de développement, puis mise en relation avec une base de donnée
+
+
+				v-card(width="80%")
+					v-card-title
+						a Lycée Alain | 61000 Alençon | Orne
+					v-card-text
+						div
+							b
+								u Septembre 2019 - Juillet 2022
+						p 2nd générale option science de l'ingénieur
+						p 1er générale spécialité mathématiques, littérature anglaise (LLCER), et numérique et science de l'informatique (NSI)
+						p Terminale générale spécialité littérature anglaise (LLCER), et numérique et science de l'informatique (NSI)
+				
+				v-card(width="80%")
+					v-card-title
+						a Lycée Alain | 61000 Alençon | Orne
+
+					v-card-text
+						div
+							b
+								u 9 Juin 2022
+						p Participation à la nuit du c0de, concours inernational de développement en groupe avec la classe de NSI.
+					v-card-actions
+						v-btn(@click="redirect('https://www.nuitducode.net/presentation')")
+							a Voir la présentation
+
+
+				v-card(width="80%")
+					v-card-title
+						a Séjour à Malte
+					v-card-text
+						div
+							b
+								u 10 Juillet 2022 - 25 Aout 2022
+						p Séjour à Malte afin d'améliorer le niveau d'anglais
 
 </template>
-
 <script>
 
 export default {
-	name: "Home",
+	name: "Cursus",
 	data: () => ({
 		drawer: true,
 		redirectitems: [
@@ -50,6 +88,9 @@ export default {
 		clickdrawer() {
 			this.drawer = !this.drawer
 			document.getElementById("main").style.marginLeft = this.drawer ? "20vw" : "10vw"
+		},
+		redirect: (url) => {
+			window.open(url, "_blank");
 		}
 	}
 }
@@ -64,6 +105,7 @@ export default {
 .v-navigation-drawer
   background: #40444b !important
   color:#d8d9da
+
 .v-app-bar-nav-icon
   background: #36393f !important
 
