@@ -3,7 +3,7 @@ accueil
     - recherche alternance développeur en france
     - site pour mieux me connaitre
 
-A propos
+Mes compétences
     - Projet professionnel
     - CV
     - Compétences
@@ -13,18 +13,18 @@ Projets
     - Mes réalisations (trié par langage)
     - Lien github
 
-Cursus
+Mon parcours
     - Scolaire
     - Expérience professionnel
     - apprentissage des langages
     - Evenements (ex: nuit du code)
+
+F.A.Q
+    - Pourquoi moi
+    - Ou je suis admisible
 
 Contact
     - numéro de téléphone
     - Adresse email
     - Lien linkedin
     - why not un systeme de contact depuis le site
-
-F.A.Q
-    - Pourquoi moi
-    - Ou je suis admisible

@@ -4,7 +4,7 @@ div
 		v-app-bar#color(absolute style='overflow: visible')
 			v-app-bar-nav-icon.navbarcolor#btnnavbar(@click='clickdrawer()')
 			v-app-bar-title
-				a Accueil
+				p Accueil
 		v-navigation-drawer#color.overflow-(v-model='drawer' absolute temporary)
 			v-list(nav dense)
 				div(v-for="item in redirectitems")
@@ -14,37 +14,71 @@ div
 		div#main
 			v-card#ecartcategorie(elevation="0")
 			v-card#ecartcategorie(elevation="0")
-			div(style="width: 90vw;")
-				v-card(width="80%")
+			div(style="width: 90vw")
+				a(href="../assets/CV.pdf" download="CV.pdf") Télécharger mon CV
+				v-card(style="width: 70vw")
 					v-card-title
-						a Mes réseaux
+						a Projet professionnel
 					v-card-text
-						p Linkedin
-						p Github
-						p Discord
-					v-card-actions
-						div#displayicons
-							v-avatar(size="100")
-								img(src="https://imgs.search.brave.com/CoYT18C6T7gkTR9LIqyVp1ZMz1MGCaE9ELYRym7feDA/rs:fit:760:750:1/g:ce/aHR0cHM6Ly9jbGlw/Z3JvdW5kLmNvbS9p/bWFnZXMvbGlua2Vk/aW4tbG9nby1mb3It/ZW1haWwtc2lnbmF0/dXJlLTIuanBn" @click="redirect('https://www.linkedin.com/in/romain-murier/')" alt ="linkedin | Romain Murier")
-							a Linkedin
-							v-avatar(size="100")
-								img(src="https://imgs.search.brave.com/ikcrhKQN5Ni60H22fPzkPeFZsD0oUqDTRZdQputksE8/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9wbmdp/bWcuY29tL3VwbG9h/ZHMvZ2l0aHViL2dp/dGh1Yl9QTkc0MC5w/bmc" @click="redirect('https://github.com/Zyco61')" alt="Github | Zyco61")
-							a Github
-							v-avatar(size="100")
-								img(src="https://imgs.search.brave.com/MUlwrtRPsY6F8ITJ8QvcENWimKGivG-tWhAdl4Lb2ps/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9sb2dv/ZG93bmxvYWQub3Jn/L3dwLWNvbnRlbnQv/dXBsb2Fkcy8yMDE3/LzExL2Rpc2NvcmQt/bG9nby00LTEucG5n" @click="redirect('https://github.com/Zyco61')" alt="Discord | Zyco#8210")
-							a Discord
+						a text
+				v-card#ecartcategorie(elevation="0")
+				v-card(style="width: 70vw")
+					v-card-title
+						p Softskills
+					v-card-text
+						lu
+							li Curieux
+							li Esprit d'équipe
+							li Autonome
+				v-card#ecartcategorie(elevation="0")
+				v-card(style="width: 70vw")
+					v-card-title
+						p Informatique
+					v-card(elevation="0")
+						v-card-title
+							p Langages
+						v-card-text
+							p Python
+							p HTML / CSS
+							p SQL
+							p C#
+					v-card(elevation="0")
+						v-card-title
+							p Environnements
+						v-card-text
+							p Visual Studio Code
+							p Visual Studio
+							p PGAdmin 4
+							p PhPMyAdmin
+							p SQLite Studio
+					v-card(elevation="0")
+						v-card-title
+							p Plateformes / Frameworks
+						v-card-text
+							p Flask
+							p Vue.JS
+							p .NET
+					v-card(elevation="0")
+						v-card-title
+							p Autre
+						v-card-text
+							p GitHub
+							p Docker
+							p Kubernetes
+							p Packoffice
+					
 </template>
 <script>
 
 export default {
-	name: "Cursus",
+	name: "Competences",
 	data: () => ({
 		drawer: true,
 		redirectitems: [
 			{title: 'Accueil', icon: 'mdi-home', path: "/"},
-			{title: 'A propos', icon: 'mdi-information', path: "/about"},
-			{title: 'Projets', icon: 'mdi-projector-screen', path: "/projects"},
-			{title: 'Cursus', icon: 'mdi-certificate', path: "/cursus"},
+			{title: 'Mes compétences', icon: 'mdi-information', path: "/competences"},
+			{title: 'Mes réalisations & projets', icon: 'mdi-projector-screen', path: "/projects"},
+			{title: 'Mon parcours', icon: 'mdi-certificate', path: "/cursus"},
 			{title: 'F.A.Q', icon: 'mdi-help', path: "/faq"},
 			{title: 'Contact', icon: 'mdi-forum', path: "/contact"}
 
@@ -95,6 +129,6 @@ img
 
 #displayicons
   display: grid
-  grid-template-columns: repeat(6, auto)
+  grid-template-columns: repeat(12, auto)
   grid-gap: 10px
 </style>

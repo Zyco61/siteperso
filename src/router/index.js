@@ -10,11 +10,11 @@ const routes = [
 		}
 	},
 	{
-		path: '/about',
-		name: 'About',
+		path: '/competences',
+		name: 'Competences',
 
 		component: () => {
-			return import('../views/About.vue')
+			return import('../views/Competences.vue')
 		}
 	},
 	{
@@ -31,6 +31,14 @@ const routes = [
 
 		component: function() {
 			return import("../views/404NotFound")
+		}
+	},
+	{
+		path: '/contact',
+		name: 'Contact',
+
+		component: () => {
+			return import('../views/Contact.vue')
 		}
 	}
 ]

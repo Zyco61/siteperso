@@ -4,7 +4,7 @@ div
 		v-app-bar#color(absolute style='overflow: visible')
 			v-app-bar-nav-icon.navbarcolor#btnnavbar(@click='clickdrawer()')
 			v-app-bar-title
-				a Accueil
+				p Accueil
 		v-navigation-drawer#color.overflow-(v-model='drawer' absolute temporary)
 			v-list(nav dense)
 				div(v-for="item in redirectitems")
@@ -14,39 +14,30 @@ div
 		div#main
 			v-card#ecartcategorie(elevation="0")
 			v-card#ecartcategorie(elevation="0")
-			div(style="width: 90vw;")
-				v-card(width="80%")
-					br
-					br
-					p Bonjour, et bienvenue sur ma page personnelle.
-					br
-					p Je m'appelle Romain, alias Zyco si vous me cherchez sur les réseaux sociaux.
-					br
-					p Passionné par le développement informatique depuis mes 12 ans, je recherche aujourd'hui une alternance à Bac+2 ou 3 pour évoluer dans le développement logiciel.
-					br
-					p Et puisque juste après le bac, mon futur employeur se posera naturellement la question de ma valeur ajoutée pour son entreprise, ce mini site sans prétention a vocation à répondre au maximum des questions qu'il peut se poser.
-					br
-					lu
-						li Que sais-je déjà faire?
-						li Quel est mon projet professionnel, quelles sont mes motivations?
-						li Une alternance, oui, mais ou et quand, dans quelles conditions?
-						li Et d'abord, pourquoi me choisir moi plutôt qu'un autre?
-					br
-					p Professionnel, recruteur, ou simple curieux, je vous souhaite donc une bonne navigation, en espérant que vous trouverez ici de quoi satisfaire toutes vos interrogations.
-					br
-					p Convaincu ? N'hésitez pas à me contacter sur la page dédiée ou sur Linkedin, pour un RdV, une question, un encouragement, un contact ou un conseil.
-					br
-					p Toujours sceptique? Laissez-moi aussi, si vous le souhaitez, un commentaire !
-					br
-					p Et rendez-vous dans 10 ans!
-					br
+			div(style="width: 90vw")
+				v-card(style="width: 70vw")
+					v-card-title
+						a Me contacter
+					v-card-text
+						div
+							v-avatar(size="25px")
+								img(src="https://imgs.search.brave.com/XZkHCWs9n0L_pR_kfek_snhmE5tIykxNW3vSbQEgvKY/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9jbGlw/Z3JvdW5kLmNvbS9p/bWFnZXMvZW1haWwt/bG9nby1wbmctMTku/cG5n" alt="logo mail")
+							a murierromain@gmail.com
+						div
+							v-avatar(size="25px")
+								img(src="https://imgs.search.brave.com/3Ymda-4jE_Nk4zePf95JVSOsa2s5p_opYtaD72Cx7mE/rs:fit:1200:1200:1/g:ce/aHR0cDovL3d3dy5j/bGlwYXJ0YmVzdC5j/b20vY2xpcGFydHMv/S2luL285Ry9LaW5v/OUd6WFQucG5n" alt="logo de téléphone")
+							a +33 7 68 49 17 95
+						div
+							v-avatar(size="25px")
+								img(src="https://imgs.search.brave.com/NTA6oV__EoeoNhhVAVYRKtAVRLt5okQVHjCSvs7FV4s/rs:fit:840:859:1/g:ce/aHR0cHM6Ly90b3Bw/bmcuY29tL3VwbG9h/ZHMvcHJldmlldy9s/aW5rZWRpbi1jb2xv/ci1pY29uLWxpbmtl/ZGluLWxvZ28tcm91/bmQtMTE1NjI5MjA3/MzJxY3R2eGtyZGNk/LnBuZw" alt="logo linkedin")
+							a https://www.linkedin.com/in/murierromain/
 
+					
 </template>
-
 <script>
 
 export default {
-	name: "Home",
+	name: "Competences",
 	data: () => ({
 		drawer: true,
 		redirectitems: [
@@ -69,6 +60,9 @@ export default {
 		clickdrawer() {
 			this.drawer = !this.drawer
 			document.getElementById("main").style.marginLeft = this.drawer ? "20vw" : "10vw"
+		},
+		redirect: (url) => {
+			window.open(url, "_blank");
 		}
 	}
 }
@@ -90,4 +84,14 @@ export default {
 #ecartcategorie
   background: transparent !important
   height: 10vh
+
+
+.v-btn
+  background: #40444b !important
+  color:#d8d9da
+
+#displayicons
+  display: grid
+  grid-template-columns: repeat(12, auto)
+  grid-gap: 10px
 </style>

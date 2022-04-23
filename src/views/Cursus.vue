@@ -79,9 +79,9 @@ export default {
 		drawer: true,
 		redirectitems: [
 			{title: 'Accueil', icon: 'mdi-home', path: "/"},
-			{title: 'A propos', icon: 'mdi-information', path: "/about"},
-			{title: 'Projets', icon: 'mdi-projector-screen', path: "/projects"},
-			{title: 'Cursus', icon: 'mdi-certificate', path: "/cursus"},
+			{title: 'Mes compétences', icon: 'mdi-information', path: "/competences"},
+			{title: 'Mes réalisations & projets', icon: 'mdi-projector-screen', path: "/projects"},
+			{title: 'Mon parcours', icon: 'mdi-certificate', path: "/cursus"},
 			{title: 'F.A.Q', icon: 'mdi-help', path: "/faq"},
 			{title: 'Contact', icon: 'mdi-forum', path: "/contact"}
 
