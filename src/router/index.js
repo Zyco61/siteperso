@@ -8,7 +8,6 @@ const routes = [
 		component:  () => {
 			return import('../views/Home.vue')
 		}
-
 	},
 	{
 		path: '/cursus',

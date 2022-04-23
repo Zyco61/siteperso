@@ -7,6 +7,14 @@ v-app(style="background: #36393f !important")
 <script>
 export default {
   name: 'App',
+  watch: {
+    $route: {
+      immediate: true,
+        handler(to, from) {
+            document.title = to.meta.title || 'Romain MURIER';
+        }
+      },
+  },
   data: () => ({
     //
   }),
