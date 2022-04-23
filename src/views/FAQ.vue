@@ -19,7 +19,35 @@ div
 					v-card-title
 						a F.A.Q
 					v-card-text
-						a Questions
+						lu
+							li
+								b Que sais-je déjà faire?
+							p réponse
+							br
+
+							li
+								b Quel est mon projet professionnel, quelles sont mes motivations?
+							p réponse
+							br
+
+							li
+								b Une alternance, oui, mais ou et quand, dans quelles conditions?
+							p réponse
+							br
+							
+							li
+								b Ai-je des projets informatiques ?
+							p réponse
+							br
+
+							li
+								b Quels avantages pour l'entreprise ?
+							p réponse
+							br
+
+							li
+								b Et d'abord, pourquoi me choisir moi plutôt qu'un autre?
+							p réponse
 </template>
 <script>
 
@@ -40,6 +68,11 @@ export default {
 	mounted() {
 		document.getElementById("main").style.marginLeft = "20vw"
 	},
+	methods: {
+		redirectnavbar: function(path) {
+			this.$router.push(path)
+		},
+	}
 }
 
 
