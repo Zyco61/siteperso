@@ -17,59 +17,22 @@ div
 			div(style="width: 90vw;")
 				v-card(width="80%")
 					v-card-title
-						a A3Multimedia | 49300 Cholet | Maine-et-Loire
+						a Mes réseaux
 					v-card-text
-						div
-							b
-								u 17 Décembre 2018 - 21 Décembre 2018
-						p Stage d'observation de 3e, qui m'a permis de confirmer ma voie professionnelle
-						p Suivi d'un développeur et étude d'un site web créer par l'entreprise (recherche de bugs, failles etc)
-						p Etude de WinDev, logiciel de développement, puis mise en relation avec une base de donnée
+						p Linkedin
+						p Github
+						p Discord
 					v-card-actions
-						v-btn(@click="redirect('https://www.a3multimedia.com/')")
-							a Voir le site
-
-
-				v-card(width="80%")
-					v-card-title
-						a Lycée Alain | 61000 Alençon | Orne
-					v-card-text
-						div
-							b
-								u Septembre 2019 - Juillet 2022
-						p 2nd générale option science de l'ingénieur
-						p 1er générale spécialité mathématiques, littérature anglaise (LLCER), et numérique et science de l'informatique (NSI)
-						p Terminale générale spécialité littérature anglaise (LLCER), et numérique et science de l'informatique (NSI)
-					v-card-actions
-						v-btn(@click="redirect('https://lyceealainalencon.fr/')")
-							a Voir le site
-				
-				v-card(width="80%")
-					v-card-title
-						a Lycée Alain | 61000 Alençon | Orne
-
-					v-card-text
-						div
-							b
-								u 9 Juin 2022
-						p Participation à la nuit du c0de, concours inernational de développement en groupe avec la classe de NSI.
-					v-card-actions
-						v-btn(@click="redirect('https://www.nuitducode.net/presentation')")
-							a Voir la présentation
-
-
-				v-card(width="80%")
-					v-card-title
-						a EF Formation | STJ St. Julian's | Malte
-					v-card-text
-						div
-							b
-								u 10 Juillet 2022 - 25 Aout 2022
-						p Séjour à Malte avec EF Formation avec d'autres étrangers pour améliorer mon niveau d'anglais
-					v-card-actions
-						v-btn(@click="redirect('https://www.maltadvice.com/fr/ef-malte/')")
-							a Voir le site
-
+						div#displayicons
+							v-avatar(size="100")
+								img(src="https://imgs.search.brave.com/CoYT18C6T7gkTR9LIqyVp1ZMz1MGCaE9ELYRym7feDA/rs:fit:760:750:1/g:ce/aHR0cHM6Ly9jbGlw/Z3JvdW5kLmNvbS9p/bWFnZXMvbGlua2Vk/aW4tbG9nby1mb3It/ZW1haWwtc2lnbmF0/dXJlLTIuanBn" @click="redirect('https://www.linkedin.com/in/romain-murier/')" alt ="linkedin | Romain Murier")
+							a Linkedin
+							v-avatar(size="100")
+								img(src="https://imgs.search.brave.com/ikcrhKQN5Ni60H22fPzkPeFZsD0oUqDTRZdQputksE8/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9wbmdp/bWcuY29tL3VwbG9h/ZHMvZ2l0aHViL2dp/dGh1Yl9QTkc0MC5w/bmc" @click="redirect('https://github.com/Zyco61')" alt="Github | Zyco61")
+							a Github
+							v-avatar(size="100")
+								img(src="https://imgs.search.brave.com/MUlwrtRPsY6F8ITJ8QvcENWimKGivG-tWhAdl4Lb2ps/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9sb2dv/ZG93bmxvYWQub3Jn/L3dwLWNvbnRlbnQv/dXBsb2Fkcy8yMDE3/LzExL2Rpc2NvcmQt/bG9nby00LTEucG5n" @click="redirect('https://github.com/Zyco61')" alt="Discord | Zyco#8210")
+							a Discord
 </template>
 <script>
 
@@ -126,4 +89,12 @@ export default {
 .v-btn
   background: #40444b !important
   color:#d8d9da
+
+img
+  cursor: pointer
+
+#displayicons
+  display: grid
+  grid-template-columns: repeat(6, auto)
+  grid-gap: 10px
 </style>
