@@ -40,6 +40,14 @@ const routes = [
 		component: () => {
 			return import('../views/Contact.vue')
 		}
+	},
+	{
+		path: '/faq',
+		name: 'FAQ',
+
+		component: () => {
+			return import('../views/FAQ.vue')
+		}
 	}
 ]
 
