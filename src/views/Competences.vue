@@ -26,7 +26,7 @@ div
 						p Devenir développeur logiciel, bien sur !
 						br
 						p Et partir d'entrée de jeu en alternance jusqu'à bac+2 / 3, pour commencer.
-						p Mobile France entière: C'est l'environnement professionnel et les missions qui m'intéressent :
+						p Mobile France entière: Ce sont l'environnement professionnel et les missions qui m'intéressent :
 						p Parce qu'il n'y a rien de mieux que l'entreprise pour appliquer les apprentissages de l'école, pratiquer, s'immerger dans le monde professionnel,
 							a  travailler en équipe, échanger des points de vue, et surtout s'impliquer dans des projets concrets et utiles.
 						p Et voir du pays, c'est un plus ! ;-)

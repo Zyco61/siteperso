@@ -36,7 +36,7 @@ div
 							p J’ai postulé sur la France entière, suis admissible ou en cours d’admission dans de nombreux établissements, et avec une intention d’embauche, les portes des écoles s’ouvrent !
 							p Formation à Bac+2 ou 3, le choix est vaste !
 							br
-							p Voici une liste non exhaustive des formations par école. J’ai des préférences, bien sûr, mais le mieux est d’en discuter, non ?
+							p Voici une liste non exhaustive des formations par département. J’ai des préférences, bien sûr, mais le mieux est d’en discuter, non ?
 							br
 							li
 								a(href="https://iut.univ-cotedazur.fr/departements-et-formations/informatique/bachelor-universitaire-de-technologie" target="_blank") 06 - I.U.T Nice - BUT Informatique 
@@ -121,12 +121,14 @@ div
 							p
 								u Pour en savoir + :
 							br
-							p Aides à l’embauche d’un alternant : https://entreprendre.service-public.fr/vosdroits/F23556
+							p
+								a(href="https://entreprendre.service-public.fr/vosdroits/F23556") Aides à l’embauche d’un alternant
 							br
-							p Rémunération des alternants : https://www.service-public.fr/particuliers/actualites/A15108
+							p 
+								a(href="https://www.service-public.fr/particuliers/actualites/A15108") Rémunération des alternants
 							br
-							p Simulateur de cout : https://www.alternance.emploi.gouv.fr/simulateur-employeur/etape-1
-							br
+							p 
+								a(href="https://www.alternance.emploi.gouv.fr/simulateur-employeur/etape-1") Simulateur de cout d'un alternant
 							p (Ma date de naissance : le 22/10/2004)
 							br
 
@@ -156,7 +158,8 @@ div
 							br
 							p La plupart des établissements d’alternance proposent les 2 formules.
 							br
-							p Pour tout savoir : https://www.service-public.fr/particuliers/vosdroits/F31704
+							p 
+								a(href="https://www.service-public.fr/particuliers/vosdroits/F31704") Pour en savoir plus
 							br
 
 					v-card(elevation="0")

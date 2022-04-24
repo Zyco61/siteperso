@@ -15,10 +15,10 @@ div
 			v-card#ecartcategorie(elevation="0")
 			v-card#ecartcategorie(elevation="0")
 			div(style="width: 90vw;")
-				v-card(width="80%")
+				v-card(width="80%" elevtion="0")
 					v-card-title
 						a 2018 | Initiation au développement
-						v-btn(@click="redirect('https://www.nuitducode.net/presentation')" style="margin-left: 8vw;")
+						v-btn(@click="redirect('https://www.a3multimedia.com/')" style="margin-left: 8vw;")
 							a En savoir +
 					v-card-text
 						div
@@ -30,7 +30,15 @@ div
 						p Une première expérience pratique qui a définitivement confirmé ma vocation !
 						br
 
-				v-card(width="80%")
+				v-card(width="80%" elevtion="0")
+					v-card-title
+						a Auto formation
+					v-card-text
+						p Depuis 2018, en parallèle de mes études, je développe mes compétences en informatique en autodidacte, par le suivi de tutoriels, vidéos youtubes, cours en ligne, etc, et en échangeant sur les forums, où je trouve de l'aide auprès de développeurs expérimentés, et apporte la mienne sur les sujets que je maitrise.
+						p Ces échanges me permettent également de découvrir de nouvelles technologies, de nouveaux outils, des pratiques différentes, et de les appliquer.
+						br
+
+				v-card(width="80%" elevtion="0")
 					v-card-title
 						a Bac général spécialité Numérique et Science de l'Informatique (NSI)
 					v-card-text
@@ -41,7 +49,7 @@ div
 						p Option science de l'ingénieur, spécialité NSI (Algorithmique, Python, SQL), complémentaires mathématiques et litérature anglaise.
 						br
 				
-				v-card(width="80%")
+				v-card(width="80%" elevtion="0")
 					v-card-title
 						a Concours d'informatique
 						v-btn(@click="redirect('https://www.nuitducode.net/presentation')" style="margin-left: 14vw;")
@@ -53,10 +61,10 @@ div
 						p Participation à la nuit du c0de, concours international de développement en groupe avec la classe de NSI.
 						br
 
-				v-card(width="80%")
+				v-card(width="80%" elevtion="0")
 					v-card-title
 						a Immersion de 2 mois en anglais
-						v-btn(@click="redirect('https://www.maltadvice.com/fr/ef-malte/')" style="margin-left: 9.5vw;")
+						v-btn(@click="redirect('https://www.ef.fr/lt/destinations/malta/st-julians')" style="margin-left: 9.5vw;")
 							a Voir le site
 					v-card-text
 						div

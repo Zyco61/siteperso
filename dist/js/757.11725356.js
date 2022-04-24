@@ -1,2 +1,0 @@
-"use strict";(self["webpackChunklastvoxes"]=self["webpackChunklastvoxes"]||[]).push([[757],{6311:(e,n,t)=>{t.r(n),t.d(n,{default:()=>d});var r=t(6252),s=t(7167);const a=(0,r._)("h1",{class:"center"},"404 NOT FOUND",-1),o=(0,r.Uk)("Return to the main page");function u(e,n,t,u,c,l){return(0,r.wg)(),(0,r.iD)(r.HY,null,[a,(0,r.Wm)(s.T,{onClick:n[0]||(n[0]=e=>l.returnindex())},{default:(0,r.w5)((()=>[o])),_:1})],64)}const c={methods:{returnindex:()=>{window.location.href="/"}}};var l=t(3744);const i=(0,l.Z)(c,[["render",u]]),d=i}}]);
-//# sourceMappingURL=757.11725356.js.map
