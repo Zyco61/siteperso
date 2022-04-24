@@ -4,7 +4,7 @@ div
 		v-app-bar#color(absolute style='overflow: visible')
 			v-app-bar-nav-icon.navbarcolor#btnnavbar(@click='clickdrawer()')
 			v-app-bar-title
-				p Accueil
+				p Contact
 		v-navigation-drawer#color.overflow-(v-model='drawer' absolute temporary)
 			v-list(nav dense)
 				div(v-for="item in redirectitems")
@@ -20,17 +20,19 @@ div
 						a Me contacter
 					v-card-text
 						div
-							v-avatar(size="25px")
+							v-avatar(size="30px")
 								img(src="https://imgs.search.brave.com/XZkHCWs9n0L_pR_kfek_snhmE5tIykxNW3vSbQEgvKY/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9jbGlw/Z3JvdW5kLmNvbS9p/bWFnZXMvZW1haWwt/bG9nby1wbmctMTku/cG5n" alt="logo mail")
-							a#copy murierromain@gmail.com
+							a  murierromain@gmail.com
+							br
 						div
-							v-avatar(size="25px")
+							v-avatar(size="30px")
 								img(src="https://imgs.search.brave.com/3Ymda-4jE_Nk4zePf95JVSOsa2s5p_opYtaD72Cx7mE/rs:fit:1200:1200:1/g:ce/aHR0cDovL3d3dy5j/bGlwYXJ0YmVzdC5j/b20vY2xpcGFydHMv/S2luL285Ry9LaW5v/OUd6WFQucG5n" alt="logo de téléphone")
-							a#copy +33 7 68 49 17 95
+							a    +33 7 68 49 17 95
+							br
 						div
-							v-avatar(size="25px")
+							v-avatar(size="30px")
 								img(src="https://imgs.search.brave.com/NTA6oV__EoeoNhhVAVYRKtAVRLt5okQVHjCSvs7FV4s/rs:fit:840:859:1/g:ce/aHR0cHM6Ly90b3Bw/bmcuY29tL3VwbG9h/ZHMvcHJldmlldy9s/aW5rZWRpbi1jb2xv/ci1pY29uLWxpbmtl/ZGluLWxvZ28tcm91/bmQtMTE1NjI5MjA3/MzJxY3R2eGtyZGNk/LnBuZw" alt="logo linkedin")
-							a#copy https://www.linkedin.com/in/murierromain/
+							a    https://www.linkedin.com/in/murierromain/	
 
 					
 </template>
@@ -45,7 +47,7 @@ export default {
 			{title: 'Mes compétences', icon: 'mdi-information', path: "/competences"},
 			{title: 'Mes réalisations & projets', icon: 'mdi-projector-screen', path: "/projects"},
 			{title: 'Mon parcours', icon: 'mdi-certificate', path: "/cursus"},
-			{title: 'F.A.Q', icon: 'mdi-help', path: "/faq"},
+			{title: 'F.A.Q Alternance', icon: 'mdi-help', path: "/faq"},
 			{title: 'Contact', icon: 'mdi-forum', path: "/contact"}
 
 		],
@@ -85,12 +87,13 @@ export default {
   background: transparent !important
   height: 10vh
 
-.v-btn
-  background: #40444b !important
-  color:#d8d9da
+.v-app-bar-nav-icon
+  background: #d9d8da !important	
 
 #displayicons
   display: grid
   grid-template-columns: repeat(12, auto)
   grid-gap: 10px
+
+  
 </style>
