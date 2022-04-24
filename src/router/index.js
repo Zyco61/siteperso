@@ -50,11 +50,11 @@ const routes = [
 		}
 	},
 	{
-		path: '/projects',
-		name: 'Projects',
+		path: '/realisations',
+		name: 'Realisations',
 
 		component: () => {
-			return import('../views/Projects.vue')
+			return import('../views/Realisations.vue')
 		}
 	},
 ]

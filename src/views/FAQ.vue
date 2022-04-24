@@ -182,7 +182,7 @@ export default {
 		redirectitems: [
 			{title: 'Accueil', icon: 'mdi-home', path: "/"},
 			{title: 'Mes compétences', icon: 'mdi-information', path: "/competences"},
-			{title: 'Mes réalisations & projets', icon: 'mdi-projector-screen', path: "/projects"},
+			{title: 'Mes réalisations', icon: 'mdi-projector-screen', path: "/realisations"},
 			{title: 'Mon parcours', icon: 'mdi-certificate', path: "/cursus"},
 			{title: 'F.A.Q Alternance', icon: 'mdi-help', path: "/faq"},
 			{title: 'Contact', icon: 'mdi-forum', path: "/contact"}

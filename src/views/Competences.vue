@@ -60,33 +60,59 @@ div
 							p Langages
 						v-card-text
 							p Python
+								img(src="https://zupimages.net/up/22/16/yj9j.png" alt="3" width="100")
 							p HTML / CSS
+								img(src="https://zupimages.net/up/22/16/uetb.png" alt="1.5" width="100")
 							p SQL
+								img(src="https://zupimages.net/up/22/16/9dl1.png" alt="2.5" width="100")
 							p C#
+								img(src="https://zupimages.net/up/22/16/nubq.png" alt="1" width="100")
 					v-card(elevation="0")
 						v-card-title
 							p Environnements
 						v-card-text
 							p Visual Studio Code
+								img(src="https://zupimages.net/up/22/16/yj9j.png" alt="3" width="100")
 							p Visual Studio
+								img(src="https://zupimages.net/up/22/16/mfp5.png" alt="2" width="100")
 							p PGAdmin 4
+								img(src="https://zupimages.net/up/22/16/9dl1.png" alt="2.5" width="100")
 							p PhPMyAdmin
+								img(src="https://zupimages.net/up/22/16/mfp5.png" alt="2" width="100")
 							p SQLite Studio
+								img(src="https://zupimages.net/up/22/16/yj9j.png" alt="3" width="100")
 					v-card(elevation="0")
 						v-card-title
 							p Plateformes / Frameworks
 						v-card-text
 							p Flask
+								img(src="https://zupimages.net/up/22/16/9dl1.png" alt="2.5" width="100")
 							p Vue.JS
+								img(src="https://zupimages.net/up/22/16/mfp5.png" alt="2" width="100")
 							p .NET
+								img(src="https://zupimages.net/up/22/16/nubq.png" alt="1" width="100")
+					v-card(elevation="0")
+						v-card-title
+							p Bases de données
+						v-card-text
+							p SQLite
+								img(src="https://zupimages.net/up/22/16/yj9j.png" alt="3" width="100")
+							p PostgreSQL
+								img(src="https://zupimages.net/up/22/16/yj9j.png" alt="3" width="100")
+							p MySQL
+								img(src="https://zupimages.net/up/22/16/mfp5.png" alt="2" width="100")
 					v-card(elevation="0")
 						v-card-title
 							p Autre
 						v-card-text
 							p GitHub
+								img(src="https://zupimages.net/up/22/16/9dl1.png" alt="2.5" width="100")
 							p Docker
+								img(src="https://zupimages.net/up/22/16/nubq.png" alt="1" width="100")
 							p Kubernetes
+								img(src="https://zupimages.net/up/22/16/nubq.png" alt="1" width="100")
 							p Packoffice
+								img(src="https://zupimages.net/up/22/16/9dl1.png" alt="2.5" width="100")
 					
 </template>
 <script>
@@ -98,7 +124,7 @@ export default {
 		redirectitems: [
 			{title: 'Accueil', icon: 'mdi-home', path: "/"},
 			{title: 'Mes compétences', icon: 'mdi-information', path: "/competences"},
-			{title: 'Mes réalisations & projets', icon: 'mdi-projector-screen', path: "/projects"},
+			{title: 'Mes réalisations', icon: 'mdi-projector-screen', path: "/realisations"},
 			{title: 'Mon parcours', icon: 'mdi-certificate', path: "/cursus"},
 			{title: 'F.A.Q Alternance', icon: 'mdi-help', path: "/faq"},
 			{title: 'Contact', icon: 'mdi-forum', path: "/contact"}

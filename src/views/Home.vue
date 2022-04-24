@@ -26,10 +26,7 @@ div
 							br
 							p Passionné par le développement informatique depuis mes 12 ans, je recherche aujourd'hui une alternance à Bac+2 ou 3 pour évoluer dans le développement logiciel.
 							br
-							p Et puisque juste après le bac, mon futur employeur se posera naturellement la question de ma valeur ajoutée pour son entreprise, ce mini site sans prétention a vocation à répondre au maximum 
-								u
-									a(@click="redirectnavbar('/faq')") des questions
-								a  qu'il peut se poser.
+							p Et puisque juste après le bac, mon futur employeur se posera naturellement la question de ma valeur ajoutée pour son entreprise, ce mini site sans prétention a vocation à répondre au maximum des questions qu'il peut se poser.
 							br
 							li Que sais-je déjà faire?
 							li Quel est mon projet professionnel, quelles sont mes motivations?
@@ -56,7 +53,7 @@ export default {
 		redirectitems: [
 			{title: 'Accueil', icon: 'mdi-home', path: "/"},
 			{title: 'Mes compétences', icon: 'mdi-information', path: "/competences"},
-			{title: 'Mes réalisations & projets', icon: 'mdi-projector-screen', path: "/projects"},
+			{title: 'Mes réalisations', icon: 'mdi-projector-screen', path: "/realisations"},
 			{title: 'Mon parcours', icon: 'mdi-certificate', path: "/cursus"},
 			{title: 'F.A.Q Alternance', icon: 'mdi-help', path: "/faq"},
 			{title: 'Contact', icon: 'mdi-forum', path: "/contact"}
