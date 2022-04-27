@@ -15,7 +15,7 @@ div
 			v-card#ecartcategorie(elevation="0")
 			v-card#ecartcategorie(elevation="0")
 			div(style="width: 90vw")
-				a#white(href="../assets/CV.pdf" download="CV.pdf") Télécharger mon CV
+				a#white(href="../assets/CV-Romain-MURIER.pdf" download="CV-Romain-MURIER.pdf") Télécharger mon CV
 				br
 				br
 				br
@@ -42,78 +42,174 @@ div
 						p Mes Softskills
 					v-card-text
 						lu
-							li Curieux : Si c'est utile à mon projet ou ma mission, ça m'intéresse !!
-							li Autonome : Pour mes formations, je me suis renseigné, j'ai suivi des tutoriels, trouvé des projets pour appliquer.
-							li Esprit d'équipe : L'alternance c'est aussi sortir du cadre scolaire et intégrer une équipe professionnelle, et nouer des relations de travail pour travailler en synergie. 
-							li Tenace : En difficulté, je cherche, je m'accroche et je me dépasse.
-							li Flexible : Je m'adapte aux situations et environnements, j'aime quand ca bouge (et quoi de mieux que l'informatique pour ça) !
+							li 
+								b Curieux : 
+								a Si c'est utile à mon projet ou ma mission, ça m'intéresse !!
+
+							li 
+								b Autonome :
+								a  Pour mes formations, je me suis renseigné, j'ai suivi des tutoriels, trouvé des projets pour appliquer.
+
+							li 
+								b Esprit d'équipe : 
+								a L'alternance c'est aussi sortir du cadre scolaire et intégrer une équipe professionnelle, et nouer des relations de travail pour travailler en synergie. 
+							li 
+								b Tenace : 
+								a En difficulté, je cherche, je m'accroche et je me dépasse.
+
+							li 
+								b Flexible : 
+								a Je m'adapte aux situations et environnements, j'aime quand ca bouge (et quoi de mieux que l'informatique pour ça) !
+				v-card#ecartcategorie(elevation="0")
+				v-card(style="width: 70vw")
+					v-card-title
+						a Mes connaissances en langues
+					v-card-text
+						table
+								tr
+									th(width="1%") 
+									th(width="1%") 
+								tr
+									td#center Anglais
+									td 
+										img(src="https://zupimages.net/up/22/16/yj9j.png" alt="3" width="100")
+								tr
+									td#center Espagnol
+									td
+										img(src="https://zupimages.net/up/22/16/uetb.png" alt="1.5" width="100")
+
 				v-card#ecartcategorie(elevation="0")
 				v-card(style="width: 70vw")
 					v-card-title
 						p Mes connaissances informatiques actuelles
 					v-card-text
 						p J'ai à peine 18 ans, je suis loin d'avoir 10 ans d'expérience, mais je ne pars pas de rien (voir 
-							a#link(@click="redirectnavbar('/projects')") réalisations et projets
+							a#link(@click="redirectnavbar('/projects')") Mes réalisations
 							a ) ^^ !
 					v-card(elevation="0")
 						v-card-title
 							p Langages
 						v-card-text
-							p Python
-								img(src="https://zupimages.net/up/22/16/yj9j.png" alt="3" width="100")
-							p HTML / CSS
-								img(src="https://zupimages.net/up/22/16/uetb.png" alt="1.5" width="100")
-							p SQL
-								img(src="https://zupimages.net/up/22/16/9dl1.png" alt="2.5" width="100")
-							p C#
-								img(src="https://zupimages.net/up/22/16/nubq.png" alt="1" width="100")
+							table
+								tr
+									th(width="1%") 
+									th(width="1%") 
+								tr
+									td#center Python
+									td 
+										img(src="https://zupimages.net/up/22/16/yj9j.png" alt="3" width="100")
+								tr
+									td#center HTML / CSS
+									td
+										img(src="https://zupimages.net/up/22/16/uetb.png" alt="1.5" width="100")
+								tr
+									td#center JavaScript
+									td
+										img(src="https://zupimages.net/up/22/16/mfp5.png" alt="2" width="100")
+								tr
+									td#center SQL
+									td
+										img(src="https://zupimages.net/up/22/16/9dl1.png" alt="2.5" width="100")
+								tr
+									td#center C#
+									td
+										img(src="https://zupimages.net/up/22/16/nubq.png" alt="1" width="100")
+									
 					v-card(elevation="0")
 						v-card-title
 							p Environnements
 						v-card-text
-							p Visual Studio Code
-								img(src="https://zupimages.net/up/22/16/yj9j.png" alt="3" width="100")
-							p Visual Studio
-								img(src="https://zupimages.net/up/22/16/mfp5.png" alt="2" width="100")
-							p PGAdmin 4
-								img(src="https://zupimages.net/up/22/16/9dl1.png" alt="2.5" width="100")
-							p PhPMyAdmin
-								img(src="https://zupimages.net/up/22/16/mfp5.png" alt="2" width="100")
-							p SQLite Studio
-								img(src="https://zupimages.net/up/22/16/yj9j.png" alt="3" width="100")
+							table
+								tr
+									th(width="1%") 
+									th(width="1%") 
+								tr
+									td#center Visual Studio Code
+									td 
+										img(src="https://zupimages.net/up/22/16/yj9j.png" alt="3" width="100")
+								tr
+									td#center Visual Studio
+									td
+										img(src="https://zupimages.net/up/22/16/mfp5.png" alt="2" width="100")
+								tr
+									td#center PGAmin 4
+									td
+										img(src="https://zupimages.net/up/22/16/9dl1.png" alt="2.5" width="100")
+								tr
+									td#center PhPMyAdmin
+									td
+										img(src="https://zupimages.net/up/22/16/mfp5.png" alt="2" width="100")
+								tr
+									td#center SQLite Studio
+									td
+										img(src="https://zupimages.net/up/22/16/yj9j.png" alt="3" width="100")
+
 					v-card(elevation="0")
 						v-card-title
 							p Plateformes / Frameworks
 						v-card-text
-							p Flask
-								img(src="https://zupimages.net/up/22/16/9dl1.png" alt="2.5" width="100")
-							p Vue.JS
-								img(src="https://zupimages.net/up/22/16/mfp5.png" alt="2" width="100")
-							p .NET
-								img(src="https://zupimages.net/up/22/16/nubq.png" alt="1" width="100")
+							table
+								tr
+									th(width="1%") 
+									th(width="1%") 
+								tr
+									td#center Flask
+									td 
+										img(src="https://zupimages.net/up/22/16/9dl1.png" alt="2.5" width="100")
+								tr
+									td#center Vue.JS
+									td
+										img(src="https://zupimages.net/up/22/16/mfp5.png" alt="2" width="100")
+								tr
+									td#center .NET
+									td
+										img(src="https://zupimages.net/up/22/16/nubq.png" alt="1" width="100")
+
 					v-card(elevation="0")
 						v-card-title
 							p Bases de données
 						v-card-text
-							p SQLite
-								img(src="https://zupimages.net/up/22/16/yj9j.png" alt="3" width="100")
-							p PostgreSQL
-								img(src="https://zupimages.net/up/22/16/yj9j.png" alt="3" width="100")
-							p MySQL
-								img(src="https://zupimages.net/up/22/16/mfp5.png" alt="2" width="100")
+							table
+								tr
+									th(width="1%") 
+									th(width="1%") 
+								tr
+									td#center PostgreSQL
+									td 
+										img(src="https://zupimages.net/up/22/16/yj9j.png" alt="3" width="100")
+								tr
+									td#center MySQL
+									td
+										img(src="https://zupimages.net/up/22/16/yj9j.png" alt="3" width="100")
+								tr
+									td#center SQLite
+									td
+										img(src="https://zupimages.net/up/22/16/mfp5.png" alt="2" width="100")
+
 					v-card(elevation="0")
 						v-card-title
 							p Autre
 						v-card-text
-							p GitHub
-								img(src="https://zupimages.net/up/22/16/9dl1.png" alt="2.5" width="100")
-							p Docker
-								img(src="https://zupimages.net/up/22/16/nubq.png" alt="1" width="100")
-							p Kubernetes
-								img(src="https://zupimages.net/up/22/16/nubq.png" alt="1" width="100")
-							p Packoffice
-								img(src="https://zupimages.net/up/22/16/9dl1.png" alt="2.5" width="100")
-					
+							table
+								tr
+									th(width="1%") 
+									th(width="1%") 
+								tr
+									td#center GitHub
+									td 
+										img(src="https://zupimages.net/up/22/16/9dl1.png" alt="2.5" width="100")
+								tr
+									td#center Docker
+									td
+										img(src="https://zupimages.net/up/22/16/nubq.png" alt="1" width="100")
+								tr
+									td#center Kubernetes
+									td
+										img(src="https://zupimages.net/up/22/16/nubq.png" alt="1" width="100")
+								tr
+									td#center Packoffice
+									td
+										img(src="https://zupimages.net/up/22/16/9dl1.png" alt="2.5" width="100")
 </template>
 <script>
 
@@ -181,4 +277,8 @@ img
 
 #link
   color: #000000
+
+td
+  text-align: center
+
 </style>

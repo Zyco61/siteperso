@@ -45,43 +45,55 @@ div
 							li
 								a(href="https://www.institut-g4.fr/" target="_blank") 13 - INSTITUT G4 - Concepteur développeur d'applications (titre professionnel bac+3)
 							li
-								a(href="https://catalogue.cesi.fr/developpeur-informatique-2169022/" target="_blank") 13 - CESI - Développeur informatique (titre bac+2) - En cours d'admission
+								a(href="https://catalogue.cesi.fr/developpeur-informatique-2169022/" target="_blank") 13 - CESI - Développeur informatique (titre bac+2) 
+								b - En cours d'admission
 							li
 								a(href="https://www.eni-ecole.fr/formations/developpement/bac2-developpeur-web-et-web-mobile/" target="_blank") 29 - ENI - Développeur web et web mobile (titre bac+2)
+								b  - Admissible
 							li
-								a(href="https://catalogue.cesi.fr/developpeur-informatique-2169022/" target="_blank") 29 - CESI - Développeur informatique (titre bac+2) - En cours d'admission
+								a(href="https://catalogue.cesi.fr/developpeur-informatique-2169022/" target="_blank") 29 - CESI - Développeur informatique (titre bac+2) 
+								b - En cours d'admission
 							li
 								a(href="https://www.esgi.fr/programmes/architecture-logiciels.html" target="_blank") 31 - ESGI - Bachelor Architecture des logiciels (bac+3)
 							li
-								a(href="https://catalogue.cesi.fr/developpeur-informatique-2169022/" target="_blank") 33 - CESI - Développeur informatique (titre bac+2) - En cours d'admission
+								a(href="https://catalogue.cesi.fr/developpeur-informatique-2169022/" target="_blank") 33 - CESI - Développeur informatique (titre bac+2) 
+								b - En cours d'admission
 							li
 								a(href="https://www.eni-ecole.fr/formations/developpement/bac2-developpeur-web-et-web-mobile/" target="_blank") 35 - ENI - Développeur web et web mobile (titre bac+2)
+								b  - Admissible
 							li
 								a(href="https://www.esgi.fr/programmes/architecture-logiciels.html" target="_blank") 38 - ESGI - Bachelor Architecture des logiciels (bac+3)
 							li
 								a(href="https://www.esgi.fr/programmes/architecture-logiciels.html" target="_blank") 44 - ESGI - Bachelor Architecture des logiciels (bac+3)
 							li
 								a(href="https://www.eni-ecole.fr/formations/developpement/bac2-developpeur-web-et-web-mobile/" target="_blank") 44 - ENI - Développeur web et web mobile (titre bac+2)
+								b  - Admissible
 							li
 								a(href="https://www.esgi.fr/programmes/architecture-logiciels.html" target="_blank") 51 - ESGI - Bachelor Architecture des logiciels (bac+3)
 							li
-								a(href="https://catalogue.cesi.fr/developpeur-informatique-2169022/" target="_blank") 51 - CESI - Développeur informatique (titre bac+2) - En cours d'admission
+								a(href="https://catalogue.cesi.fr/developpeur-informatique-2169022/" target="_blank") 51 - CESI - Développeur informatique (titre bac+2) 
+								b - En cours d'admission
 							li
-								a(href="https://catalogue.cesi.fr/developpeur-informatique-2169022/" target="_blank") 54 - CESI - Développeur informatique (titre bac+2) - En cours d'admission
+								a(href="https://catalogue.cesi.fr/developpeur-informatique-2169022/" target="_blank") 54 - CESI - Développeur informatique (titre bac+2) 
+								b - En cours d'admission
 							li
 								a(href="https://www.esgi.fr/programmes/architecture-logiciels.html" target="_blank") 59 - ESGI - Bachelor Architecture des logiciels (bac+3)
 							li
-								a(href="https://catalogue.cesi.fr/developpeur-informatique-2169022/" target="_blank") 59 - CESI - Développeur informatique (titre bac+2) - En cours d'admission
+								a(href="https://catalogue.cesi.fr/developpeur-informatique-2169022/" target="_blank") 59 - CESI - Développeur informatique (titre bac+2) 
+								b - En cours d'admission
 							li
-								a(href="https://catalogue.cesi.fr/developpeur-informatique-2169022/" target="_blank") 64 - CESI - Développeur informatique (titre bac+2) - En cours d'admission
+								a(href="https://catalogue.cesi.fr/developpeur-informatique-2169022/" target="_blank") 64 - CESI - Développeur informatique (titre bac+2) 
+								b - En cours d'admission
 							li
 								a(href="https://www.purple-campus.com/produit/analyste-developpeur-dapplications-informatiques" target="_blank") 66 -  Purple Campus - Analyste développeur d'applications informatiques (Bac +2)
 							li
 								a(href="https://www.esgi.fr/programmes/architecture-logiciels.html" target="_blank") 69 - ESGI - Bachelor Architecture des logiciels (bac+3)
 							li
-								a(href="https://catalogue.cesi.fr/developpeur-informatique-2169022/" target="_blank") 69 - CESI - Développeur informatique (titre bac+2) - En cours d'admission
+								a(href="https://catalogue.cesi.fr/developpeur-informatique-2169022/" target="_blank") 69 - CESI - Développeur informatique (titre bac+2) 
+								b - En cours d'admission
 							li
-								a(href="https://www.imie-paris.fr/les-formations/bts-sio-bac-2/" target="_blank") 75 - IMIE - BTS SIO (Bac +2) - Admis
+								a(href="https://www.imie-paris.fr/les-formations/bts-sio-bac-2/" target="_blank") 75 - IMIE - BTS SIO (Bac +2) 
+								b - Admis
 							li
 								a(href="https://www.esgi.fr/programmes/architecture-logiciels.html" target="_blank") 75 - ESGI - Bachelor Architecture des logiciels (bac+3)
 							li
@@ -91,9 +103,11 @@ div
 							li
 								a(href="https://www.utec77.fr/bts-services-informatiques-aux-organisations-sio-option-solutions-dinfrastructure-systemes-et-0" target="_blank") 75 - UTEC - BTS SIO
 							li
-								a(href="https://catalogue.cesi.fr/developpeur-informatique-2169022/" target="_blank") 76 - CESI - Développeur informatique (titre bac+2) - En cours d'admission
+								a(href="https://catalogue.cesi.fr/developpeur-informatique-2169022/" target="_blank") 76 - CESI - Développeur informatique (titre bac+2) 
+								b - En cours d'admission
 							li
 								a(href="https://www.eni-ecole.fr/formations/developpement/bac2-developpeur-web-et-web-mobile/" target="_blank") 79 - ENI - Développeur web et web mobile (titre bac+2)
+								b  - Admissible
 							li
 								a(href="https://www.esgi.fr/programmes/architecture-logiciels.html" target="_blank") 83 - ESGI - Bachelor Architecture des logiciels (bac+3)
 							li

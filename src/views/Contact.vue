@@ -36,6 +36,7 @@ div
 							v-avatar(size="30px")
 								img(src="https://imgs.search.brave.com/NTA6oV__EoeoNhhVAVYRKtAVRLt5okQVHjCSvs7FV4s/rs:fit:840:859:1/g:ce/aHR0cHM6Ly90b3Bw/bmcuY29tL3VwbG9h/ZHMvcHJldmlldy9s/aW5rZWRpbi1jb2xv/ci1pY29uLWxpbmtl/ZGluLWxvZ28tcm91/bmQtMTE1NjI5MjA3/MzJxY3R2eGtyZGNk/LnBuZw" alt="logo linkedin")
 							a(href="https://www.linkedin.com/in/romain-murier/" target="_blank")  https://www.linkedin.com/in/romain-murier/
+							br
 
 					
 </template>
