@@ -29,6 +29,10 @@ div
 							a  me suis initié au logiciel de développement WinDev, en relation avec une base de données.
 						p Une première expérience pratique qui a définitivement confirmé ma vocation !
 						br
+						a(href="../assets/Parcours-avenir-Romain-MURIER.pdf" download="Parcours-avenir-Romain-MURIER.pdf") Télécharger mon évaluation de stage
+						br
+						br
+						a(href="mailto:sebastien.burgevin@a3multimedia.com?subject=Demande de référence Romain MURIER&body=Bonjour Monsieur Burgevin, %0D%0DJe m'intéresse au parcours de M. Romain MURIER, qui a effectué un stage dans votre établissement en 2018.%0D%0DPourriez-vous me donner votre ressenti sur son comportement, ses résultats et ses progrès au cours de cette période ?%0D%0DEn vous remerciant pour votre retour,%0D%0DCordialement.") Demander une référence (M. Burgevin, gérant)
 
 				v-card(width="80%" elevtion="0")
 					v-card-title
