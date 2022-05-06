@@ -6,7 +6,7 @@ div
 			v-app-bar-title
 				a Accueil
 		v-navigation-drawer#navigationdrawer(v-model='drawer' absolute temporary)
-			v-list(nav dense)
+			v-list(nav dense style="background-color: #fafafa")
 				div(v-for="item in redirectitems")
 					v-list-item(:prepend-icon='item.icon' :title='item.title' @click="redirectnavbar(item.path)")
 		v-main
@@ -84,6 +84,10 @@ export default {
 .v-navigation-drawer
   background: #40444b !important
   color:#d8d9da
+
+.v-list
+  background: #40444b !important
+  color: #ffffff
 
 .v-app-bar-nav-icon
   background: #36393f !important

@@ -127,6 +127,10 @@ export default {
 .v-app-bar-nav-icon
   background: #36393f !important
 
+.v-list
+  background: #40444b !important
+  color: #ffffff
+
 #ecartcategorie
   background: transparent !important
   height: 10vh

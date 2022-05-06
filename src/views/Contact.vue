@@ -30,7 +30,7 @@ div
 						div
 							v-avatar(size="30px")
 								img(src="https://imgs.search.brave.com/3Ymda-4jE_Nk4zePf95JVSOsa2s5p_opYtaD72Cx7mE/rs:fit:1200:1200:1/g:ce/aHR0cDovL3d3dy5j/bGlwYXJ0YmVzdC5j/b20vY2xpcGFydHMv/S2luL285Ry9LaW5v/OUd6WFQucG5n" alt="logo de téléphone")
-							a  +33 7 68 49 17 95
+							a(href="tel:0768491795")  +33 7 68 49 17 95
 							br
 						div
 							v-avatar(size="30px")
@@ -93,6 +93,10 @@ export default {
 
 .v-app-bar-nav-icon
   background: #d9d8da !important	
+
+.v-list
+  background: #40444b !important
+  color: #ffffff
 
 #displayicons
   display: grid

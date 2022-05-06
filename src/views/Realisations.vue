@@ -112,7 +112,7 @@ export default {
 	data: () => ({
 		lastvoxesnumguilds: 0,
 		drawer: true,
-		token: process.env.TOKEN,
+		token: process.env.VUE_APP_TOKEN,
 		redirectitems: [
 			{title: 'Accueil', icon: 'mdi-home', path: "/"},
 			{title: 'Mes compétences', icon: 'mdi-information', path: "/competences"},
@@ -160,6 +160,10 @@ export default {
 
 .v-app-bar-nav-icon
   background: #d9d8da !important
+
+.v-list
+  background: #40444b !important
+  color: #ffffff
 
 #ecartcategorie
   background: transparent !important
