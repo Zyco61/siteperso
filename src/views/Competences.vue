@@ -41,25 +41,24 @@ div
 					v-card-title
 						p Mes Softskills
 					v-card-text
-						lu
-							li 
-								b Curieux : 
-								a Si c'est utile à mon projet ou ma mission, ça m'intéresse !!
+						li 
+							b Curieux : 
+							a Si c'est utile à mon projet ou ma mission, ça m'intéresse !!
 
-							li 
-								b Autonome :
-								a  Pour mes formations, je me suis renseigné, j'ai suivi des tutoriels, trouvé des projets pour appliquer.
+						li 
+							b Autonome :
+							a  Pour mes formations, je me suis renseigné, j'ai suivi des tutoriels, trouvé des projets pour appliquer.
 
-							li 
-								b Esprit d'équipe : 
-								a L'alternance c'est aussi sortir du cadre scolaire et intégrer une équipe professionnelle, et nouer des relations de travail pour travailler en synergie. 
-							li 
-								b Tenace : 
-								a En difficulté, je cherche, je m'accroche et je me dépasse.
+						li 
+							b Esprit d'équipe : 
+							a L'alternance c'est aussi sortir du cadre scolaire et intégrer une équipe professionnelle, et nouer des relations de travail pour travailler en synergie. 
+						li 
+							b Tenace : 
+							a En difficulté, je cherche, je m'accroche et je me dépasse.
 
-							li 
-								b Flexible : 
-								a Je m'adapte aux situations et environnements, j'aime quand ca bouge (et quoi de mieux que l'informatique pour ça) !
+						li 
+							b Flexible : 
+							a Je m'adapte aux situations et environnements, j'aime quand ca bouge (et quoi de mieux que l'informatique pour ça) !
 				v-card#ecartcategorie(elevation="0")
 				v-card(style="width: 70vw")
 					v-card-title
@@ -251,10 +250,7 @@ export default {
   background: #40444b !important
   color:#d8d9da
 
-.v-toolbar-title
-  margin-left: 10px
-  color: #ffffff
-  font-weight: bold
+
 
 .v-navigation-drawer
   background: #40444b !important

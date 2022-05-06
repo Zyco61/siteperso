@@ -24,17 +24,17 @@ div
 						br
 						div
 							v-avatar(size="30px")
-								img(src="https://imgs.search.brave.com/XZkHCWs9n0L_pR_kfek_snhmE5tIykxNW3vSbQEgvKY/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9jbGlw/Z3JvdW5kLmNvbS9p/bWFnZXMvZW1haWwt/bG9nby1wbmctMTku/cG5n" alt="logo mail")
+								img(:src="images.mail" alt="EMail")
 							a(href="mailto:murierromain@gmail.com" target="_blank")  murierromain@gmail.com
 							br
 						div
 							v-avatar(size="30px")
-								img(src="https://imgs.search.brave.com/3Ymda-4jE_Nk4zePf95JVSOsa2s5p_opYtaD72Cx7mE/rs:fit:1200:1200:1/g:ce/aHR0cDovL3d3dy5j/bGlwYXJ0YmVzdC5j/b20vY2xpcGFydHMv/S2luL285Ry9LaW5v/OUd6WFQucG5n" alt="logo de téléphone")
+								img(:src="images.phone" alt="N° Téléphone")
 							a(href="tel:0768491795")  +33 7 68 49 17 95
 							br
 						div
 							v-avatar(size="30px")
-								img(src="https://imgs.search.brave.com/NTA6oV__EoeoNhhVAVYRKtAVRLt5okQVHjCSvs7FV4s/rs:fit:840:859:1/g:ce/aHR0cHM6Ly90b3Bw/bmcuY29tL3VwbG9h/ZHMvcHJldmlldy9s/aW5rZWRpbi1jb2xv/ci1pY29uLWxpbmtl/ZGluLWxvZ28tcm91/bmQtMTE1NjI5MjA3/MzJxY3R2eGtyZGNk/LnBuZw" alt="logo linkedin")
+								img(:src="images.linkedin" alt="Linkedin" size="30vw")
 							a(href="https://www.linkedin.com/in/romain-murier/" target="_blank")  https://www.linkedin.com/in/romain-murier/
 							br
 
@@ -45,6 +45,11 @@ div
 export default {
 	name: "Competences",
 	data: () => ({
+		images: {
+			linkedin: null,
+			phone: null,
+			mail: null
+		},
 		drawer: true,
 		redirectitems: [
 			{title: 'Accueil', icon: 'mdi-home', path: "/"},
@@ -56,6 +61,11 @@ export default {
 
 		],
 	}),
+	created() {
+		this.images.linkedin = required("../assets/images/linkedin.png");
+		this.images.phone = required("../assets/images/phone.png");
+		this.images.mail = required("../assets/images/mail.png");
+	},
 	mounted() {
 		document.getElementById("main").style.marginLeft = "20vw";
 	},
