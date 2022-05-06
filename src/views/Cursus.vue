@@ -120,6 +120,11 @@ export default {
   background: #40444b !important
   color:#d8d9da
 
+.v-toolbar-title
+  margin-left: 10px
+  color: #ffffff
+  font-weight: bold
+
 .v-navigation-drawer
   background: #40444b !important
   color:#d8d9da
