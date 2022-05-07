@@ -5,7 +5,7 @@ div
 			v-app-bar-nav-icon(@click='clickdrawer()')
 			v-app-bar-title
 				p Mes compétences
-		v-navigation-drawer#navigationdrawer.overflow-(v-model='drawer' absolute temporary)
+		v-navigation-drawer#navigationdrawer.overflow-(v-model='drawer' absolute permanent)
 			v-list(nav dense)
 				div(v-for="item in redirectitems")
 					v-list-item(:prepend-icon='item.icon' :title='item.title' @click="redirectnavbar(item.path)")
@@ -227,7 +227,7 @@ export default {
 		],
 	}),
 	mounted() {
-		document.getElementById("main").style.marginLeft = "20vw"
+		document.getElementById("main").style.marginLeft = "5vw"
 	},
 	methods: {
 		redirectnavbar: function(path) {
@@ -235,7 +235,7 @@ export default {
 		},
 		clickdrawer() {
 			this.drawer = !this.drawer
-			document.getElementById("main").style.marginLeft = this.drawer ? "20vw" : "10vw"
+			document.getElementById("main").style.marginLeft = this.drawer ? "5vw" : "15vw"
 		},
 		redirect: (url) => {
 			window.open(url, "_blank");
@@ -249,8 +249,6 @@ export default {
 .v-app-bar
   background: #40444b !important
   color:#d8d9da
-
-
 
 .v-navigation-drawer
   background: #40444b !important
@@ -266,24 +264,5 @@ export default {
 #ecartcategorie
   background: transparent !important
   height: 10vh
-
-
-
-img
-  cursor: pointer
-
-#displayicons
-  display: grid
-  grid-template-columns: repeat(12, auto)
-  grid-gap: 10px
-
-#white
-  color: #FFFFFF
-
-#link
-  color: #000000
-
-td
-  text-align: center
 
 </style>

@@ -5,7 +5,7 @@ div
 			v-app-bar-nav-icon.navbarcolor#btnnavbar(@click='clickdrawer()')
 			v-app-bar-title
 				a Accueil
-		v-navigation-drawer#navigationdrawer(v-model='drawer' absolute temporary)
+		v-navigation-drawer#navigationdrawer(v-model='drawer' absolute permanent)
 			v-list(nav dense style="background-color: #fafafa")
 				div(v-for="item in redirectitems")
 					v-list-item(:prepend-icon='item.icon' :title='item.title' @click="redirectnavbar(item.path)")
@@ -61,7 +61,7 @@ export default {
 		],
 	}),
 	mounted() {
-		document.getElementById("main").style.marginLeft = "20vw"
+		document.getElementById("main").style.marginLeft = "5vw"
 	},
 	methods: {
 		redirectnavbar: function(path) {
@@ -69,7 +69,7 @@ export default {
 		},
 		clickdrawer() {
 			this.drawer = !this.drawer
-			document.getElementById("main").style.marginLeft = this.drawer ? "20vw" : "10vw"
+			document.getElementById("main").style.marginLeft = this.drawer ? "5vw" : "15vw"
 		}
 	}
 }

@@ -5,7 +5,7 @@ div
 			v-app-bar-nav-icon.navbarcolor(@click='clickdrawer()')
 			v-app-bar-title
 				a Mes réalisations
-		v-navigation-drawer#color.overflow-(v-model='drawer' absolute temporary)
+		v-navigation-drawer#color.overflow-(v-model='drawer' absolute permanent)
 			v-list(nav dense)
 				div(v-for="item in redirectitems")
 					v-list-item(:prepend-icon='item.icon' :title='item.title' @click="redirectnavbar(item.path)")
@@ -134,7 +134,7 @@ export default {
 		})
   },
 	mounted() {
-		document.getElementById("main").style.marginLeft = "20vw"
+		document.getElementById("main").style.marginLeft = "5vw"
 	},
 	methods: {
 		redirectnavbar: function(path) {
@@ -142,7 +142,7 @@ export default {
 		},
 		clickdrawer() {
 			this.drawer = !this.drawer
-			document.getElementById("main").style.marginLeft = this.drawer ? "20vw" : "10vw"
+			document.getElementById("main").style.marginLeft = this.drawer ? "5vw" : "15vw"
 		},
 	}
 }
