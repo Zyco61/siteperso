@@ -2,9 +2,9 @@
 div
 	v-layout
 		v-app-bar#color(absolute style='overflow: visible')
-			v-app-bar-nav-icon.navbarcolor#btnnavbar(@click='clickdrawer()')
+			v-app-bar-nav-icon.navbarcolor(@click='clickdrawer()')
 			v-app-bar-title
-				p Contact
+				a Contact
 		v-navigation-drawer#color.overflow-(v-model='drawer' absolute temporary)
 			v-list(nav dense)
 				div(v-for="item in redirectitems")
@@ -23,33 +23,28 @@ div
 						p N'hésitez pas à me contacter !
 						br
 						div
-							v-avatar(size="30px")
-								img(:src="images.mail" alt="EMail")
+							//- div(v-if="image.mail")
+							//- 	v-avatar(size="30px")
+							//- v-img(src="../assets/images/linkedin.png" alt="EMail")
 							a(href="mailto:murierromain@gmail.com" target="_blank")  murierromain@gmail.com
 							br
 						div
-							v-avatar(size="30px")
-								img(:src="images.phone" alt="N° Téléphone")
+							//- v-avatar(size="30px")
+							//- 	img(:src="images.phone" alt="N° Téléphone")
 							a(href="tel:0768491795")  +33 7 68 49 17 95
 							br
 						div
-							v-avatar(size="30px")
-								img(:src="images.linkedin" alt="Linkedin" size="30vw")
+							//- v-avatar(size="30px")
+							//- 	img(:src="images.linkedin" alt="Linkedin" size="30vw")
 							a(href="https://www.linkedin.com/in/romain-murier/" target="_blank")  https://www.linkedin.com/in/romain-murier/
 							br
-
 					
 </template>
 <script>
-
 export default {
-	name: "Competences",
+	name: "Contact",
 	data: () => ({
-		images: {
-			linkedin: null,
-			phone: null,
-			mail: null
-		},
+		width: 300,
 		drawer: true,
 		redirectitems: [
 			{title: 'Accueil', icon: 'mdi-home', path: "/"},
@@ -61,13 +56,8 @@ export default {
 
 		],
 	}),
-	created() {
-		this.images.linkedin = required("../assets/images/linkedin.png");
-		this.images.phone = required("../assets/images/phone.png");
-		this.images.mail = required("../assets/images/mail.png");
-	},
 	mounted() {
-		document.getElementById("main").style.marginLeft = "20vw";
+		document.getElementById("main").style.marginLeft = "20vw"
 	},
 	methods: {
 		redirectnavbar: function(path) {
@@ -77,9 +67,6 @@ export default {
 			this.drawer = !this.drawer
 			document.getElementById("main").style.marginLeft = this.drawer ? "20vw" : "10vw"
 		},
-		redirect: (url) => {
-			window.open(url, "_blank");
-		}
 	}
 }
 
@@ -100,23 +87,13 @@ export default {
   color:#d8d9da
 
 .v-app-bar-nav-icon
-  background: #36393f !important
-
-#ecartcategorie
-  background: transparent !important
-  height: 10vh
-
-.v-app-bar-nav-icon
-  background: #d9d8da !important	
+  background: #d9d8da !important
 
 .v-list
   background: #40444b !important
   color: #ffffff
 
-#displayicons
-  display: grid
-  grid-template-columns: repeat(12, auto)
-  grid-gap: 10px
-
-  
+#ecartcategorie
+  background: transparent !important
+  height: 10vh
 </style>

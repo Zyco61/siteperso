@@ -15,7 +15,7 @@ div
 			v-card#ecartcategorie(elevation="0")
 			v-card#ecartcategorie(elevation="0")
 			div(style="width: 90vw")
-				a#white(href="../assets/CV-Romain-MURIER.pdf" download="CV-Romain-MURIER.pdf") Télécharger mon CV
+				a#white(href="../assets/files/CV-Romain-MURIER.pdf" download="CV-Romain-MURIER.pdf") Télécharger mon CV
 				br
 				br
 				br
