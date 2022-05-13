@@ -45,6 +45,7 @@ div
 								b  - En cours d'admission
 							li
 								a(href="https://www.institut-g4.fr/" target="_blank") 13 - INSTITUT G4 - Concepteur développeur d'applications (titre professionnel bac+3)
+								b  - En cours d'admission
 							li
 								a(href="https://catalogue.cesi.fr/developpeur-informatique-2169022/" target="_blank") 13 - CESI - Développeur informatique (titre bac+2) 
 								b - Admissible
@@ -152,7 +153,7 @@ div
 							a On peut commencer quand ?
 						v-card-text
 							p En Juillet/Aout 2022, je suis en immersion Anglais à Malte.
-							br 
+							br
 							p Mais dès début Septembre, je suis libre comme l’air ! Et si ça vous arrange, un contrat peut également débuter plus tard, sur Octobre ou Novembre 2022.
 							br
 

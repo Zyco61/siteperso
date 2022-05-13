@@ -50,7 +50,7 @@ div
 							b
 								u Lycée Alain | Alençon | Septembre 2019 - Juillet 2022
 						p Cursus scolaire (2nde à terminale).
-						p Option science de l'ingénieur, spécialité NSI (Algorithmique, Python, SQL), complémentaires mathématiques et litérature anglaise.
+						p Option science de l'ingénieur, spécialité NSI (Algorithmique, Python, SQL, Protocoles), complémentaires mathématiques et litérature anglaise.
 						br
 				
 				v-card(width="80%" elevtion="0")
