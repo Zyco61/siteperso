@@ -38,9 +38,26 @@ div
 							//- 	img(:src="images.linkedin" alt="Linkedin" size="30vw")
 							a(href="https://www.linkedin.com/in/romain-murier/" target="_blank")  https://www.linkedin.com/in/romain-murier/
 							br
+				v-card#ecartcategorie
+				v-card(style="width: 70vw")
+					v-card-title
+						p Contact spontané
+					v-card-item
+						v-text-field#name(label="Nom/Prénom")
+						p
+							b Coordonnées
+						v-text-field#email(label="Email")
+						v-text-field#phone(label="Téléphone")
+						v-text-field#site(label="Site web")
+						p 
+							b Message
+						v-text-field#message(label="Message")
+						v-btn(@click="sendContact()") Envoyer mon contact
 					
 </template>
 <script>
+const axios = require("axios").default;
+
 export default {
 	name: "Contact",
 	data: () => ({
@@ -66,6 +83,51 @@ export default {
 		clickdrawer() {
 			this.drawer = !this.drawer
 			document.getElementById("main").style.marginLeft = this.drawer ? "5vw" : "15vw"
+		},
+		getFieldInformationById(id) {
+			console.log(id)
+			return document.getElementById(id).value
+		},
+		sendContact() {
+			axios({
+				method: 'post',
+				url: 'https://discordapp.com/api/v9/webhooks/974677464813035520/Kl6iAN9QTQGWpB_7vzYLNgti3XPJo7K-dkau_rKKxFSgwSVuVLHVUoOT87AHruVqlycK',
+				data: {
+					"content":"@everyone",
+					"username":this.getFieldInformationById('name'),
+					"embeds": [{
+						"title": "Nouveau contact",
+						"description": "Contact spontané via le site web",
+						"fields":[
+							{
+								"name":"Coordonnées",
+								"value":"_ _",
+								"inline":false
+							},
+							{
+								"name":"téléphone",
+								"value":this.getFieldInformationById('phone'),
+								"inline":true
+							},
+							{
+								"name":"mail",
+								"value":this.getFieldInformationById('email'),
+								"inline":true
+							},
+							{
+								"name":"site web",
+								"value":this.getFieldInformationById('site'),
+								"inline":true
+							},
+							{
+								"name":"Message",
+								"value":this.getFieldInformationById('message'),
+								"inline":false
+							}
+						]
+					}]
+				}
+			})
 		},
 	}
 }
