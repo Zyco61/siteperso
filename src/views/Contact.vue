@@ -63,6 +63,8 @@ export default {
 	data: () => ({
 		width: 300,
 		drawer: true,
+		webhook_id: process.env.VUE_APP_WEBHOOK_ID,
+		webhook_token: process.env.VUE_APP_WEBHOOK_TOKEN,
 		redirectitems: [
 			{title: 'Accueil', icon: 'mdi-home', path: "/"},
 			{title: 'Mes compétences', icon: 'mdi-information', path: "/competences"},
@@ -91,7 +93,7 @@ export default {
 		sendContact() {
 			axios({
 				method: 'post',
-				url: 'https://discordapp.com/api/v9/webhooks/974677464813035520/Kl6iAN9QTQGWpB_7vzYLNgti3XPJo7K-dkau_rKKxFSgwSVuVLHVUoOT87AHruVqlycK',
+				url: `https://discordapp.com/api/v9/webhooks/${this.webhook_id}/${this.webhook_token}`,
 				data: {
 					"content":"@everyone",
 					"username":this.getFieldInformationById('name'),
