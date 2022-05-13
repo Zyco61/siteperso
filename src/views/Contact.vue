@@ -41,10 +41,10 @@ div
 				v-card#ecartcategorie
 				v-card(style="width: 70vw")
 					v-card-title
-						p Contact spontané
+						p Me contacter
 					v-card-text
 						p Les informations en rouge sont obligatoires.
-					v-card-item
+						br
 						v-text-field.labelcolor#name(label="Nom/Prénom *")
 						p
 							b Coordonnées
@@ -54,14 +54,20 @@ div
 						p 
 							b Message
 						v-text-field.labelcolor#message(label="Message *")
-						v-btn(@click="sendContact()") Envoyer mon contact
+						v-btn(@click="checkField()") Envoyer mon contact
+						v-btn(@click="test('success')") Test
+				div#alert
 					
 </template>
 <script>
 const axios = require("axios").default;
+import alertVue from '../components/alert.vue';
 
 export default {
 	name: "Contact",
+	components: {
+		alertVue
+	},
 	data: () => ({
 		width: 300,
 		drawer: true,
@@ -88,8 +94,22 @@ export default {
 			this.drawer = !this.drawer
 			document.getElementById("main").style.marginLeft = this.drawer ? "5vw" : "15vw"
 		},
+		checkField(){
+			if(!document.getElementById('name').value.length > 0){
+				console.log("nom non enrengistré")
+				return false
+			}
+			if(!document.getElementById('email').value.length > 0){
+				console.log("email non enrengistré")
+				return false
+			}
+			if (!document.getElementById('message').value.length > 0) {
+				console.log("message non enrengistré")
+				return false
+			}
+			this.sendContact()
+		},
 		getFieldInformationById(id) {
-			console.log(id)
 			return document.getElementById(id).value
 		},
 		sendContact() {
@@ -127,12 +147,41 @@ export default {
 								"name":"Message",
 								"value":this.getFieldInformationById('message'),
 								"inline":false
-							}
+							},
 						]
 					}]
 				}
 			})
 		},
+		test(type) {
+			const div = document.getElementById('alert')
+			const elem = document.createElement('div')
+			if(type === "success"){
+				elem.classList.add("v-alert","v-theme--light","bg-success","v-alert--density-default","v-alert--variant-contained-flat")
+			}else{
+				elem.classList.add("v-alert","v-theme--light","bg-error","v-alert--density-default","v-alert--variant-contained-flat")
+			}
+			const elem2 = document.createElement('div')
+			elem2.classList.add("v-alert__underlay")
+			elem.appendChild(elem2)
+			const elem3 = document.createElement('div')
+			elem3.classList.add("v-alert__prepend")
+			const elem31 = document.createElement('i')
+			if(type === "success"){
+				elem31.classList.add("mdi-check-circle", "mdi", "v-icon", "notranslate", "v-icon--size-default", "v-theme--light")
+			}else{
+				elem31.classList.add("mdi-close-circle", "mdi", "v-icon", "notranslate", "v-icon--size-default", "v-theme--light")
+			}
+			elem3.appendChild(elem31)
+			elem.appendChild(elem3)
+			const elem4 = document.createElement('div')
+			elem4.innerHTML = "Votre message a bien été envoyé"
+			elem.appendChild(elem4)
+			div.appendChild(elem)
+			setTimeout(() => {
+				div.removeChild(elem)
+			}, 5000)
+		}
 	}
 }
 
@@ -181,5 +230,10 @@ td
 .labelcolor .v-label
   color: red
   opacity: 1
+
+#alert
+  position: fixed
+  bottom: 0
+  right: 0
 
 </style>
