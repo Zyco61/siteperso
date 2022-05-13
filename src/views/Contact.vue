@@ -42,16 +42,18 @@ div
 				v-card(style="width: 70vw")
 					v-card-title
 						p Contact spontané
+					v-card-text
+						p Les informations en rouge sont obligatoires.
 					v-card-item
-						v-text-field#name(label="Nom/Prénom")
+						v-text-field.labelcolor#name(label="Nom/Prénom *")
 						p
 							b Coordonnées
-						v-text-field#email(label="Email")
+						v-text-field.labelcolor#email(label="Email *")
 						v-text-field#phone(label="Téléphone")
 						v-text-field#site(label="Site web")
 						p 
 							b Message
-						v-text-field#message(label="Message")
+						v-text-field.labelcolor#message(label="Message *")
 						v-btn(@click="sendContact()") Envoyer mon contact
 					
 </template>
@@ -175,4 +177,9 @@ img
 
 td
   text-align: center
+
+.labelcolor .v-label
+  color: red
+  opacity: 1
+
 </style>
