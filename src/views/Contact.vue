@@ -52,7 +52,7 @@ div
 						v-text-field#site(label="Site web")
 						p 
 							b Message
-						v-text-field.labelcolor#message(label="Message *")
+						v-textarea.labelcolor#message(label="Message *")
 						v-btn(@click="checkField()") Envoyer
 						//- v-btn(@click="sendMail()") envoyer un mail test
 				div#alert
