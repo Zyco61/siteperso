@@ -44,16 +44,16 @@ div
 								td
 									a(href="https://www.linkedin.com/in/romain-murier/" target="_blank")  https://www.linkedin.com/in/romain-murier/
 						br
-						v-text-field.labelcolor#name(label="Nom/Prénom *")
+						v-text-field.labelcolor#name(label="Nom/Prénom *" :rules="[rules.required]" maxlength="80" :counter="80")
 						p
 							b Coordonnées
-						v-text-field.labelcolor#email(label="Email *")
-						v-text-field#phone(label="Téléphone")
-						v-text-field#site(label="Site web")
+						v-text-field.labelcolor#email(label="Email *" :rules="[rules.required, rules.emailconstraint]" v-model="emailconstraint" maxlength="100" :counter="100")
+						v-text-field#phone(label="Téléphone" :rules="[rules.phoneconstraint]" prefix="+33")
+						v-text-field#site(label="Site web" maxlength="100" :counter="100")
 						p 
 							b Message
-						v-textarea.labelcolor#message(label="Message *")
-						v-btn(@click="checkField()") Envoyer
+						v-textarea.labelcolor#message(label="Message *" :rules="[rules.required]" maxlength="1024" :counter="1024")
+						v-btn#sendbtn(@click="checkField()") Envoyer
 						//- v-btn(@click="sendMail()") envoyer un mail test
 				div#alert
 					
@@ -70,6 +70,18 @@ export default {
 	data: () => ({
 		width: 300,
 		drawer: true,
+		rules: {
+          required: value => !!value || 'Required.',
+          counter: value => value.length <= 20 || 'Max 20 characters',
+          emailconstraint: value => {
+            const pattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+            return pattern.test(value) || 'E-mail invalide.'
+          },
+		  phoneconstraint: value => {
+			  const pattern = /^\+?[0-9 ]{9,14}$/
+			  return pattern.test(value) || 'Numéro de téléphone invalide.'
+		  },
+		},
 		webhook_id: process.env.VUE_APP_WEBHOOK_ID,
 		webhook_token: process.env.VUE_APP_WEBHOOK_TOKEN,
 		redirectitems: [
@@ -256,4 +268,7 @@ td
 #right
   text-align: right
 
+#sendbtn
+  color: #FFFFFF
+  background-color: #ba1919
 </style>
