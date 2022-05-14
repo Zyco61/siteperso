@@ -55,7 +55,6 @@ div
 							b Message
 						v-text-field.labelcolor#message(label="Message *")
 						v-btn(@click="checkField()") Envoyer mon contact
-						v-btn(@click="test('success')") Test
 				div#alert
 					
 </template>
@@ -96,16 +95,13 @@ export default {
 		},
 		checkField(){
 			if(!document.getElementById('name').value.length > 0){
-				console.log("nom non enrengistré")
-				return false
+				return this.sendAlert('error', 'Veuillez renseigner votre nom/prénom')
 			}
 			if(!document.getElementById('email').value.length > 0){
-				console.log("email non enrengistré")
-				return false
+				return this.sendAlert('error', 'Veuillez renseigner votre email')
 			}
 			if (!document.getElementById('message').value.length > 0) {
-				console.log("message non enrengistré")
-				return false
+				return this.sendAlert('error', 'Veuillez renseigner votre message')
 			}
 			this.sendContact()
 		},
@@ -113,47 +109,56 @@ export default {
 			return document.getElementById(id).value
 		},
 		sendContact() {
+			const data = {
+				"content":"@everyone",
+				"username":this.getFieldInformationById('name'),
+				"embeds": [{
+					"title": "Nouveau contact",
+					"description": "Contact spontané via le site web",
+					"fields":[
+						{
+							"name":"Coordonnées",
+							"value":"_ _",
+							"inline":false
+						},
+						{
+							"name":"Email",
+							"value":this.getFieldInformationById('email'),
+							"inline":true
+						}
+					]
+				}]
+			}
+			console.log(data.embeds[0].fields)
+			if(this.getFieldInformationById('phone').length > 0){
+				data.embeds[0].fields.push({
+							"name":"téléphone",
+							"value":this.getFieldInformationById('phone'),
+							"inline":true
+				})
+			}
+			if(this.getFieldInformationById('site').length > 0){
+				data.embeds[0].fields.push({
+							"name":"site web",
+							"value":this.getFieldInformationById('site'),
+							"inline":true
+				})
+			}
+			data.embeds[0].fields.push({
+							"name":"message",
+							"value":this.getFieldInformationById('message'),
+							"inline":false
+			})
 			axios({
 				method: 'post',
 				url: `https://discordapp.com/api/v9/webhooks/${this.webhook_id}/${this.webhook_token}`,
-				data: {
-					"content":"@everyone",
-					"username":this.getFieldInformationById('name'),
-					"embeds": [{
-						"title": "Nouveau contact",
-						"description": "Contact spontané via le site web",
-						"fields":[
-							{
-								"name":"Coordonnées",
-								"value":"_ _",
-								"inline":false
-							},
-							{
-								"name":"téléphone",
-								"value":this.getFieldInformationById('phone'),
-								"inline":true
-							},
-							{
-								"name":"mail",
-								"value":this.getFieldInformationById('email'),
-								"inline":true
-							},
-							{
-								"name":"site web",
-								"value":this.getFieldInformationById('site'),
-								"inline":true
-							},
-							{
-								"name":"Message",
-								"value":this.getFieldInformationById('message'),
-								"inline":false
-							},
-						]
-					}]
-				}
+				data: data
+			})
+			.then(response => {
+				this.sendAlert('success', 'Votre message a bien été envoyé')
 			})
 		},
-		test(type) {
+		sendAlert(type, text) {
 			const div = document.getElementById('alert')
 			const elem = document.createElement('div')
 			if(type === "success"){
@@ -175,7 +180,7 @@ export default {
 			elem3.appendChild(elem31)
 			elem.appendChild(elem3)
 			const elem4 = document.createElement('div')
-			elem4.innerHTML = "Votre message a bien été envoyé"
+			elem4.innerHTML = text
 			elem.appendChild(elem4)
 			div.appendChild(elem)
 			setTimeout(() => {
