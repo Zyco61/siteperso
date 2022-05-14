@@ -17,33 +17,32 @@ div
 			div(style="width: 90vw")
 				v-card(style="width: 70vw")
 					v-card-title
-						a Me contacter
-					v-card-text
-						p  Un entretien, une recommandation, un encouragement, ou juste un commentaire ou une question ?
-						p N'hésitez pas à me contacter !
-						br
-						div
-							//- div(v-if="image.mail")
-							//- 	v-avatar(size="30px")
-							//- v-img(src="../assets/images/linkedin.png" alt="EMail")
-							a(href="mailto:murierromain@gmail.com" target="_blank")  murierromain@gmail.com
-							br
-						div
-							//- v-avatar(size="30px")
-							//- 	img(:src="images.phone" alt="N° Téléphone")
-							a(href="tel:0768491795")  +33 7 68 49 17 95
-							br
-						div
-							//- v-avatar(size="30px")
-							//- 	img(:src="images.linkedin" alt="Linkedin" size="30vw")
-							a(href="https://www.linkedin.com/in/romain-murier/" target="_blank")  https://www.linkedin.com/in/romain-murier/
-							br
-				v-card#ecartcategorie
-				v-card(style="width: 70vw")
-					v-card-title
 						p Me contacter
 					v-card-text
-						p Les informations en rouge sont obligatoires.
+						p Un entretien, une recommandation, un encouragement, ou juste un commentaire ou une question ?
+						p N'hésitez pas à me contacter !
+						br
+						p 
+							i * Les informations en rouge sont obligatoires.
+						table#right
+							tr
+								th(width="80%") 
+								th(width="20%") 
+							tr
+								td
+								td par mail
+								td
+									a(href="mailto:murierromain@gmail.com" target="_blank")  murierromain@gmail.com
+							tr
+								td
+								td par téléphone
+								td
+									a(href="tel:0768491795")  +33 7 68 49 17 95
+							tr
+								td
+								td par linkedin
+								td
+									a(href="https://www.linkedin.com/in/romain-murier/" target="_blank")  https://www.linkedin.com/in/romain-murier/
 						br
 						v-text-field.labelcolor#name(label="Nom/Prénom *")
 						p
@@ -55,6 +54,7 @@ div
 							b Message
 						v-text-field.labelcolor#message(label="Message *")
 						v-btn(@click="checkField()") Envoyer mon contact
+						v-btn(@click="sendMail()") envoyer un mail test
 				div#alert
 					
 </template>
@@ -129,7 +129,6 @@ export default {
 					]
 				}]
 			}
-			console.log(data.embeds[0].fields)
 			if(this.getFieldInformationById('phone').length > 0){
 				data.embeds[0].fields.push({
 							"name":"téléphone",
@@ -186,6 +185,19 @@ export default {
 			setTimeout(() => {
 				div.removeChild(elem)
 			}, 5000)
+		},
+		sendMail(){
+			Email.send({
+				Host : "smtp.gmail.com",
+				Username : "MyUsername",
+				Password : "miwaber7896miop",
+				To : 'murierromain@gmail.com',
+				From : "mmrfunnycraft@gmail.com",
+				Subject : "This is the subject",
+				Body : "And this is the body"
+			}).then(
+				message => alert(message)
+			);
 		}
 	}
 }
@@ -240,5 +252,8 @@ td
   position: fixed
   bottom: 0
   right: 0
+
+#right
+  text-align: right
 
 </style>
