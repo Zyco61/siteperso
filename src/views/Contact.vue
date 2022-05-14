@@ -53,8 +53,8 @@ div
 						p 
 							b Message
 						v-text-field.labelcolor#message(label="Message *")
-						v-btn(@click="checkField()") Envoyer mon contact
-						v-btn(@click="sendMail()") envoyer un mail test
+						v-btn(@click="checkField()") Envoyer
+						//- v-btn(@click="sendMail()") envoyer un mail test
 				div#alert
 					
 </template>
