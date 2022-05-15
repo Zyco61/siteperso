@@ -142,4 +142,17 @@ export default {
 
 .v-app-bar-nav-icon
   background: #d9d8da !important
+
+.v-card
+  background-color: #41454b
+  color: #FFFFFF
+
+.v-card-text
+  color: #FFFFFF
+
+a
+  color: #FFFFFF
+
+.v-btn a
+  color: black	
 </style>

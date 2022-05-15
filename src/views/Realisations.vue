@@ -173,4 +173,14 @@ export default {
 #ecartcategorie
   background: transparent !important
   height: 10vh
+
+.v-card
+  background-color: #41454b
+  color: #FFFFFF
+
+.v-card-text
+  color: #FFFFFF
+
+a
+  color: #FFFFFF
 </style>

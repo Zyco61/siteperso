@@ -1,11 +1,11 @@
 <template lang="pug">
 div
 	v-layout
-		v-app-bar#color(absolute style='overflow: visible')
-			v-app-bar-nav-icon.navbarcolor(@click='clickdrawer()')
+		v-app-bar(absolute style='overflow: visible')
+			v-app-bar-nav-icon(@click='clickdrawer()')
 			v-app-bar-title
 				a Contact
-		v-navigation-drawer#color.overflow-(v-model='drawer' absolute permanent)
+		v-navigation-drawer.overflow-(v-model='drawer' absolute permanent)
 			v-list(nav dense)
 				div(v-for="item in redirectitems")
 					v-list-item(:prepend-icon='item.icon' :title='item.title' @click="redirectnavbar(item.path)")
@@ -71,7 +71,7 @@ export default {
 		width: 300,
 		drawer: true,
 		rules: {
-          required: value => !!value || 'Required.',
+          required: value => !!value || 'Requis.',
           counter: value => value.length <= 20 || 'Max 20 characters',
           emailconstraint: value => {
             const pattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
@@ -168,6 +168,9 @@ export default {
 			.then(response => {
 				this.sendAlert('success', 'Votre message a bien été envoyé')
 			})
+			.catch(error => {
+				this.sendAlert("error", "Une erreur est survenue, veuillez me contacter par un autre moyen")
+			})
 		},
 		sendAlert(type, text) {
 			const div = document.getElementById('alert')
@@ -262,4 +265,14 @@ td
 #sendbtn
   color: #FFFFFF
   background-color: #ba1919
+
+.v-card
+  background-color: #41454b
+  color: #FFFFFF
+
+.v-card-text
+  color: #FFFFFF
+
+a
+  color: #FFFFFF
 </style>
