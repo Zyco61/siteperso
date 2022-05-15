@@ -47,8 +47,8 @@ div
 						v-text-field.labelcolor#name(label="Nom/Prénom *" :rules="[rules.required]" maxlength="80" :counter="80")
 						p
 							b Coordonnées
-						v-text-field.labelcolor#email(label="Email *" :rules="[rules.required, rules.emailconstraint]" v-model="emailconstraint" maxlength="100" :counter="100")
-						v-text-field#phone(label="Téléphone" :rules="[rules.phoneconstraint]" prefix="+33")
+						v-text-field.labelcolor#email(label="Email *" :rules="[rules.required, rules.emailconstraint]" maxlength="100" :counter="100")
+						v-text-field#phone(label="Téléphone" :rules="[rules.phoneconstraint]" prefix="+33" @keyup="editPhoneValue()" maxlength="14")
 						v-text-field#site(label="Site web" maxlength="100" :counter="100")
 						p 
 							b Message
@@ -144,7 +144,7 @@ export default {
 			if(this.getFieldInformationById('phone').length > 0){
 				data.embeds[0].fields.push({
 							"name":"téléphone",
-							"value":this.getFieldInformationById('phone'),
+							"value":`${this.getFieldInformationById('phone').replace(/ /g, "").length !== 10 ? '+33 ':''}${this.getFieldInformationById('phone')}`,
 							"inline":true
 				})
 			}
@@ -198,19 +198,10 @@ export default {
 				div.removeChild(elem)
 			}, 5000)
 		},
-		sendMail(){
-			Email.send({
-				Host : "smtp.gmail.com",
-				Username : "MyUsername",
-				Password : "miwaber7896miop",
-				To : 'murierromain@gmail.com',
-				From : "mmrfunnycraft@gmail.com",
-				Subject : "This is the subject",
-				Body : "And this is the body"
-			}).then(
-				message => alert(message)
-			);
-		}
+		editPhoneValue() {
+			const phone = document.getElementById('phone')
+			phone.value = phone.value.replace(/ /g, "").replace(/(\d)(?=(\d{2})+$)/g, '$1 ');
+		},
 	}
 }
 
