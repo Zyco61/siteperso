@@ -275,4 +275,7 @@ td
 
 a
   color: #FFFFFF
+
+.v-text-field__prefix
+  color: #FFFFFF
 </style>
