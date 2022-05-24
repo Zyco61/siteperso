@@ -82,8 +82,7 @@ export default {
 			  return pattern.test(value) || 'Numéro de téléphone invalide.'
 		  },
 		},
-		webhook_id: process.env.VUE_APP_WEBHOOK_ID,
-		webhook_token: process.env.VUE_APP_WEBHOOK_TOKEN,
+		api_endpoint: process.env.VUE_APP_API_ENDPOINT,
 		redirectitems: [
 			{title: 'Accueil', icon: 'mdi-home', path: "/"},
 			{title: 'Mes compétences', icon: 'mdi-information', path: "/competences"},
@@ -162,14 +161,14 @@ export default {
 			})
 			axios({
 				method: 'post',
-				url: `http://192.168.1.13:80/webhook`,
+				url: `${this.api_endpoint}/webhook/sendcontact`,
 				data: data
 			})
 			.then(response => {
 				this.sendAlert('success', 'Votre message a bien été envoyé')
 			})
 			.catch(error => {
-				this.sendAlert("error", "Une erreur est survenue, veuillez me contacter par un autre moyen")
+				this.sendAlert("error", `Une erreur est survenue, veuillez me contacter par un autre moyen. Erreur ${error.response.status}.`)
 			})
 		},
 		sendAlert(type, text) {
@@ -205,15 +204,6 @@ export default {
 			const phone = document.getElementById('phone')
 			phone.value = phone.value.replace(/ /g, "").replace(/(\d)(?=(\d{2})+$)/g, '$1 ');
 		},
-		test() {
-			axios({
-				method: 'get',
-				url: `http://192.168.1.13:80/webhook`
-			})
-			.then(({data}) => {
-				console.log(data)
-			})
-		}
 	}
 }
 
