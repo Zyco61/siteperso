@@ -54,7 +54,7 @@ div
 							b Message
 						v-textarea.labelcolor#message(label="Message *" :rules="[rules.required]" maxlength="1024" :counter="1024")
 						v-btn#sendbtn(@click="checkField()") Envoyer
-						//- v-btn(@click="sendMail()") envoyer un mail test
+						v-btn(@click="test()") test
 				div#alert
 					
 </template>
@@ -162,7 +162,7 @@ export default {
 			})
 			axios({
 				method: 'post',
-				url: `https://discordapp.com/api/v9/webhooks/${this.webhook_id}/${this.webhook_token}`,
+				url: `http://192.168.1.13:80/webhook`,
 				data: data
 			})
 			.then(response => {
@@ -205,6 +205,15 @@ export default {
 			const phone = document.getElementById('phone')
 			phone.value = phone.value.replace(/ /g, "").replace(/(\d)(?=(\d{2})+$)/g, '$1 ');
 		},
+		test() {
+			axios({
+				method: 'get',
+				url: `http://192.168.1.13:80/webhook`
+			})
+			.then(({data}) => {
+				console.log(data)
+			})
+		}
 	}
 }
 

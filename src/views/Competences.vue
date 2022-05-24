@@ -83,7 +83,7 @@ div
 						p Mes connaissances informatiques actuelles
 					v-card-text
 						p J'ai à peine 18 ans, je suis loin d'avoir 10 ans d'expérience, mais je ne pars pas de rien (voir 
-							a#link(@click="redirectnavbar('/projects')") Mes réalisations
+							a#link(@click="redirectnavbar('/realisations')") Mes réalisations
 							a ) ^^ !
 					v-card(elevation="0")
 						v-card-title

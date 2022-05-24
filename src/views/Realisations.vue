@@ -112,7 +112,7 @@ export default {
 	data: () => ({
 		lastvoxesnumguilds: 0,
 		drawer: true,
-		token: process.env.VUE_APP_TOKEN,
+		api_endpoint: process.env.VUE_APP_API_ENDPOINT,
 		redirectitems: [
 			{title: 'Accueil', icon: 'mdi-home', path: "/"},
 			{title: 'Mes compétences', icon: 'mdi-information', path: "/competences"},
@@ -126,11 +126,10 @@ export default {
 	created () {
 		axios({
 			method: "GET",
-			url: "https://discordapp.com/api/v9/users/@me/guilds",
-			headers: {"Authorization": `Bot ${this.token}`}
+			url: `${this.api_endpoint}/discord/lvnumber`,
 		})
 		.then(({data}) => {
-			this.lastvoxesnumguilds = Object.keys(data).length
+			this.lastvoxesnumguilds = data
 		})
   },
 	mounted() {
