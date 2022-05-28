@@ -54,7 +54,7 @@ div
 							b Message
 						v-textarea.labelcolor#message(label="Message *" :rules="[rules.required]" maxlength="1024" :counter="1024")
 						v-btn#sendbtn(@click="checkField()") Envoyer
-						v-btn(@click="test()") test
+						//- v-btn(@click="test()") test
 				div#alert
 					
 </template>
@@ -229,8 +229,6 @@ export default {
 #ecartcategorie
   background: transparent !important
   height: 10vh
-
-
 
 img
   cursor: pointer
