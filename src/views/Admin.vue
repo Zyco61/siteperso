@@ -16,7 +16,6 @@ div#alert
 </template>
 <script>
 const axios = require("axios").default;
-
 import alertVue from '../components/alert.vue';
 
 export default {
@@ -33,10 +32,9 @@ export default {
 			this.$router.push(path)
 		},
         loggin() {
-            console.log(this.hash(this.getValue("password")), 3)
             axios.post(`http://127.0.0.1:1235/users/checkPassword`, {
                 username: this.getValue("username"),
-                password: this.hash(this.getValue("password"))
+                password: this.$CryptoJS.SHA256(this.getValue("password")).toString()
             })
             .then(response => {
                 if(response.data.success) {
