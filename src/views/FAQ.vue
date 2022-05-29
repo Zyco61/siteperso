@@ -145,7 +145,6 @@ export default {
 		axios.get(`${this.api_endpoint}/schools/getschools`)
 		.then(response => {
 			this.schools = response.data
-			console.log(typeof this.schools)
 		})
 	},
 	mounted() {
